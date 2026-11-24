@@ -1,6 +1,6 @@
 # 自作Chrome拡張の統合 調査と実装記録（2026-11-10）
 
-対象: `C:\Users\ron06\Documents\Program`（実体は `D:\Program` へのジャンクション）
+対象: `%USERPROFILE%\Documents\Program`（実体は `D:\Program` へのジャンクション）
 統合先: `D:\Program\Shirafuka-Extensions`
 
 ## 1. 見つかった自作拡張（4件）

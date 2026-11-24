@@ -4,7 +4,7 @@
 import { createRequire } from "node:module";
 import { readFile, mkdtemp, rm } from "node:fs/promises";
 import { existsSync, readdirSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { homedir, tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -14,7 +14,7 @@ const extensionPath = path.resolve(here, "..", "..");
 const candidates = [
   process.env.PLAYWRIGHT_MODULE_PATH,
   path.join(extensionPath, "package.json"),
-  "C:/Users/ron06/Documents/Program/codex-web-debug-tools/package.json"
+  path.join(homedir(), "Documents", "Program", "codex-web-debug-tools", "package.json")
 ].filter(Boolean);
 
 function loadPlaywright() {

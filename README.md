@@ -94,7 +94,7 @@ npm run check     # 構文チェック
 node tests/browser/smoke.mjs   # 実際のChromiumへ読み込む動作確認（22項目）
 ```
 
-`tests/browser/smoke.mjs` は Playwright を使います。このリポジトリの依存には含めていないため、`PLAYWRIGHT_MODULE_PATH` で導入先を指定するか、既定の探索先（`C:\Users\ron06\Documents\Program\codex-web-debug-tools`）に Playwright がある状態で実行してください。Chromiumは `CHROMIUM_PATH` で明示できます。
+`tests/browser/smoke.mjs` は Playwright を使います。このリポジトリの依存には含めていないため、`PLAYWRIGHT_MODULE_PATH` で導入先を指定するか、既定の探索先（`%USERPROFILE%\Documents\Program\codex-web-debug-tools`）に Playwright がある状態で実行してください。Chromiumは `CHROMIUM_PATH` で明示できます。
 
 > `npm test` は `node --test` ではなく `node tests/run-all.js` を使っています。DSHのサンドボックス下では `node --test` がテストファイルごとに子プロセスを起動できず `EPERM` になるためです。
 
