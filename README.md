@@ -119,3 +119,8 @@ pwsh -NoProfile -File src/icons/generate-icons.ps1
 - [BookWalker-All-Checking](https://github.com/shirafukayayoi/BookWalker-All-Checking) v1.0.0
 
 このリポジトリを正本とし、以降の変更はここへ行います。
+
+## ライセンス
+
+MIT（[LICENSE](LICENSE)）
+
