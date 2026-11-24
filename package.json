@@ -1,0 +1,16 @@
+{
+  "name": "shirafuka-extensions",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "自作Chrome拡張（カレンダープリセット・BookWalker一括チェック・Ctrl+Enter送信）の統合版",
+  "scripts": {
+    "test": "node tests/run-all.js",
+    "test:browser": "node tests/browser/smoke.mjs",
+    "check": "node --check src/content/shared.js && node --check src/content/calendar-dom-adapter.js && node --check src/content/calendar.js && node --check src/content/bookwalker.js && node --check src/content/ctrl-enter-core.js && node --check src/content/ctrl-enter.js && node --check src/lib/messages.js && node --check src/lib/preset.js && node --check src/lib/features.js && node --check src/popup/popup.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shirafuka Extensions</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Shirafuka Extensions</h1>
+        <button id="refresh" class="icon-button" title="更新" aria-label="更新">↻</button>
+      </header>
+
+      <p id="status" role="status">読み込み中…</p>
+
+      <section class="panel">
+        <h2>機能</h2>
+        <label class="toggle-row" for="feature-calendar">
+          <span>カレンダープリセット</span>
+          <span class="switch-control">
+            <input id="feature-calendar" type="checkbox" role="switch">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+          </span>
+        </label>
+        <label class="toggle-row" for="feature-bookwalker">
+          <span>BookWalker 一括チェック</span>
+          <span class="switch-control">
+            <input id="feature-bookwalker" type="checkbox" role="switch">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+          </span>
+        </label>
+        <label class="toggle-row" for="feature-ctrl-enter">
+          <span>Ctrl+Enterで送信</span>
+          <span class="switch-control">
+            <input id="feature-ctrl-enter" type="checkbox" role="switch">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+          </span>
+        </label>
+        <p class="note">ChatGPT / Claude / Gemini / Google Chat で、Enterは改行、Ctrl+Enter（Macは⌘+Enter）は送信になります。</p>
+      </section>
+
+      <section id="calendar-panel" class="panel" hidden>
+        <h2>カレンダープリセット</h2>
+        <div id="presets" class="preset-list" aria-live="polite"></div>
+        <label class="toggle-row" for="show-booking-pages">
+          <span>予約ページ欄を表示</span>
+          <span class="switch-control">
+            <input id="show-booking-pages" type="checkbox" role="switch">
+            <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+          </span>
+        </label>
+        <form id="save-form">
+          <label for="preset-name">現在の表示状態を保存</label>
+          <div class="save-row">
+            <input id="preset-name" maxlength="40" placeholder="例: School" required>
+            <button type="submit">保存</button>
+          </div>
+        </form>
+      </section>
+
+      <p id="hint" class="hint" hidden></p>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
